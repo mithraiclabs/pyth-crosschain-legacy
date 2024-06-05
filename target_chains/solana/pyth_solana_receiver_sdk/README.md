@@ -1,3 +1,7 @@
+# This is a Fork for Legacy Compatability!
+
+This is a fork of the Pyth Receiver SDK detailed below to support Anchor versions 26 and under and solana-program versions 1.14.x and under. It is otherwise the same as the original. See: https://github.com/mithraiclabs/pyth-crosschain-legacy
+
 # Pyth Solana Receiver Rust SDK
 
 This is a Rust SDK to build Solana programs that consume Pyth price updates posted by the Pyth Solana Receiver.
