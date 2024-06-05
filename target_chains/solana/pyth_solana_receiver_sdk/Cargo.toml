@@ -1,10 +1,10 @@
 cargo-features = ["workspace-inheritance"]
 [package]
-name = "pyth-solana-receiver-sdk"
+name = "pyth-solana-receiver-sdk-legacy"
 version = "0.3.1"
-description = "SDK for the Pyth Solana Receiver program"
+description = "Compatability version of SDK for the Pyth Solana Receiver program"
 authors = ["Pyth Data Association"]
-repository = "https://github.com/pyth-network/pyth-crosschain"
+repository = "https://github.com/mithraiclabs/pyth-crosschain-legacy"
 license = "Apache-2.0"
 edition = "2021"
 
