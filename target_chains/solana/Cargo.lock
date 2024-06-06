@@ -931,12 +931,12 @@ version = "0.3.2"
 dependencies = [
  "anchor-lang",
  "hex",
- "pythnet-sdk",
+ "pythnet-sdk-legacy",
  "solana-program",
 ]
 
 [[package]]
-name = "pythnet-sdk"
+name = "pythnet-sdk-legacy"
 version = "2.1.1"
 dependencies = [
  "anchor-lang",
