@@ -509,15 +509,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "fast-math"
-version = "0.1.1"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "2465292146cdfc2011350fe3b1c616ac83cf0faeedb33463ba1c332ed8948d66"
-dependencies = [
- "ieee754",
-]
-
-[[package]]
 name = "feature-probe"
 version = "0.1.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -620,12 +611,6 @@ name = "humantime"
 version = "2.1.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "9a3a5bfb195931eeb336b2a7b4d761daec841b97f947d34394601737a7bba5e4"
-
-[[package]]
-name = "ieee754"
-version = "0.2.6"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "9007da9cacbd3e6343da136e98b0d2df013f553d35bdec8b518f07bea768e19c"
 
 [[package]]
 name = "instant"
@@ -927,7 +912,7 @@ dependencies = [
 
 [[package]]
 name = "pyth-solana-receiver-sdk-legacy"
-version = "0.3.2"
+version = "0.3.3"
 dependencies = [
  "anchor-lang",
  "hex",
@@ -937,14 +922,13 @@ dependencies = [
 
 [[package]]
 name = "pythnet-sdk-legacy"
-version = "2.1.1"
+version = "2.1.2"
 dependencies = [
  "anchor-lang",
  "bincode",
  "borsh",
  "bytemuck",
  "byteorder",
- "fast-math",
  "hex",
  "proc-macro2",
  "rustc_version",

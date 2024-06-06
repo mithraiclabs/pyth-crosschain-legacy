@@ -1,6 +1,6 @@
 [package]
 name = "pyth-solana-receiver-sdk-legacy"
-version = "0.3.2"
+version = "0.3.3"
 description = "Compatability version of SDK for the Pyth Solana Receiver program"
 authors = ["Pyth Data Association"]
 repository = "https://github.com/mithraiclabs/pyth-crosschain-legacy"
@@ -15,5 +15,5 @@ name = "pyth_solana_receiver_sdk_legacy"
 [dependencies]
 anchor-lang = "0.24.2"
 hex = ">=0.4.3"
-pythnet-sdk-legacy = { path = "../../../pythnet/pythnet_sdk_legacy", version = "2.1.1", features = ["solana-program"]}
+pythnet-sdk-legacy = { path = "../../../pythnet/pythnet_sdk_legacy", version = "2.1.2", features = ["solana-program"]}
 solana-program = ">=1.9.29"
