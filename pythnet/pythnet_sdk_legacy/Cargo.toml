@@ -1,9 +1,9 @@
 [package]
-name = "pythnet-sdk"
-version = "2.1.0"
-description = "Pyth Runtime for Solana"
+name = "pythnet-sdk-legacy"
+version = "2.1.1"
+description = "Compatability version of Pyth Runtime for Solana"
 authors = ["Pyth Data Association"]
-repository = "https://github.com/pyth-network/pythnet"
+repository = "https://github.com/mithraiclabs/pyth-crosschain-legacy"
 license = "Apache-2.0"
 edition = "2021"
 
@@ -32,7 +32,7 @@ serde_wormhole = {version ="0.1.0", optional = true}
 wormhole-vaas-serde = {version = "0.1.0", optional = true}
 libsecp256k1 = {version ="0.7.1", optional = true}
 rand = {version = "0.8.5", optional = true}
-solana-program = {version = ">=1.7.0", optional = true}
+solana-program = {version = ">=1.9.29", optional = true}
 anchor-lang  = {version = "0.24.2", optional = true}
 proc-macro2 = {version = "=1.0.79", optional = true} # pinned to 1.0.79 to compilation errors with newer versions, remove this if it compiles fine without
 
