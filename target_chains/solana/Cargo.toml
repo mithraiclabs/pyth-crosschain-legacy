@@ -1,6 +1,6 @@
 [workspace]
 members = [
-    "pyth_solana_receiver_sdk/",
+    "pyth_solana_receiver_sdk_legacy/",
 ]
 
 [profile.release]
