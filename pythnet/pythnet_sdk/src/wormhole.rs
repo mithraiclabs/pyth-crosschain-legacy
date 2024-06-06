@@ -15,8 +15,8 @@ use {
     },
     std::{
         io::{
-            Error,
-            ErrorKind::InvalidData,
+            // Error,
+            // ErrorKind::InvalidData,
             Write,
         },
         ops::{

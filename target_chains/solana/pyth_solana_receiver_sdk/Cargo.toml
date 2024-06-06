@@ -1,4 +1,3 @@
-cargo-features = ["workspace-inheritance"]
 [package]
 name = "pyth-solana-receiver-sdk-legacy"
 version = "0.3.2"
