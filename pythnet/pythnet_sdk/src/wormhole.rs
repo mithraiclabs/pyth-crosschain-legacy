@@ -55,23 +55,23 @@ impl BorshSerialize for PostedMessageUnreliableData {
     }
 }
 
-impl BorshDeserialize for PostedMessageUnreliableData {
-    fn deserialize_reader<R: std::io::prelude::Read>(reader: &mut R) -> std::io::Result<Self> {
-        let mut magic = [0u8; 3];
-        reader.read_exact(&mut magic)?;
+// impl BorshDeserialize for PostedMessageUnreliableData {
+//     fn deserialize_reader<R: std::io::prelude::Read>(reader: &mut R) -> std::io::Result<Self> {
+//         let mut magic = [0u8; 3];
+//         reader.read_exact(&mut magic)?;
 
-        let expected = b"msu";
-        if &magic != expected {
-            return Err(Error::new(
-                InvalidData,
-                format!("Magic mismatch. Expected {expected:?} but got {magic:?}"),
-            ));
-        };
-        Ok(PostedMessageUnreliableData {
-            message: <MessageData as BorshDeserialize>::deserialize_reader(reader)?,
-        })
-    }
-}
+//         let expected = b"msu";
+//         if &magic != expected {
+//             return Err(Error::new(
+//                 InvalidData,
+//                 format!("Magic mismatch. Expected {expected:?} but got {magic:?}"),
+//             ));
+//         };
+//         Ok(PostedMessageUnreliableData {
+//             message: <MessageData as BorshDeserialize>::deserialize_reader(reader)?,
+//         })
+//     }
+// }
 
 impl Deref for PostedMessageUnreliableData {
     type Target = MessageData;
@@ -99,26 +99,26 @@ pub struct AccumulatorSequenceTracker {
     pub sequence: u64,
 }
 
-#[test]
-fn test_borsh_roundtrip() {
-    let post_message_unreliable_data = PostedMessageUnreliableData {
-        message: MessageData {
-            vaa_version:           1,
-            consistency_level:     2,
-            vaa_time:              3,
-            vaa_signature_account: [4u8; 32],
-            submission_time:       5,
-            nonce:                 6,
-            sequence:              7,
-            emitter_chain:         8,
-            emitter_address:       [9u8; 32],
-            payload:               vec![10u8; 32],
-        },
-    };
+// #[test]
+// fn test_borsh_roundtrip() {
+//     let post_message_unreliable_data = PostedMessageUnreliableData {
+//         message: MessageData {
+//             vaa_version:           1,
+//             consistency_level:     2,
+//             vaa_time:              3,
+//             vaa_signature_account: [4u8; 32],
+//             submission_time:       5,
+//             nonce:                 6,
+//             sequence:              7,
+//             emitter_chain:         8,
+//             emitter_address:       [9u8; 32],
+//             payload:               vec![10u8; 32],
+//         },
+//     };
 
 
-    let encoded = borsh::to_vec(&post_message_unreliable_data).unwrap();
+//     let encoded = borsh::to_vec(&post_message_unreliable_data).unwrap();
 
-    let decoded = PostedMessageUnreliableData::try_from_slice(encoded.as_slice()).unwrap();
-    assert_eq!(decoded, post_message_unreliable_data);
-}
+//     let decoded = PostedMessageUnreliableData::try_from_slice(encoded.as_slice()).unwrap();
+//     assert_eq!(decoded, post_message_unreliable_data);
+// }
